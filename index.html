@@ -1,6 +1,7 @@
 <html>
 <body>
 <?php
+	echo "your code is started <br>";
 $cz='{
 	"pages":[
 		{
@@ -145,13 +146,13 @@ $url = 'http://PhantomJScloud.com/api/browser/v2/a-demo-key-with-low-quota-per-i
 
 $result=post($url,$cz);
 
-if ($result === FALSE) { echo "[$i] error cour\n"; }
+if ($result === FALSE) { echo "[$i] error cour <br>"; }
 $obj = json_decode( $result );
 
 
 $base64Enc = $obj->{"content"}->{"data"};
 echo "<img src='data:image/jpeg;base64,$base64Enc' />";
-echo "[$i]=> success your linkvertise\n";
+echo "[$i]=> success your linkvertise<br>";
 $i++;
 ?>
 </body>
